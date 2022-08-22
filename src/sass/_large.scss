@@ -1,0 +1,18 @@
+@media (min-width: 1200px) {
+  .wrapper {
+    max-width: 120rem;
+  }
+	
+  /* HEADER */
+	.header {
+		.hero-text {
+			h1 {
+				font-size: 2.4rem;
+			}
+
+			.company-description {
+				font-size: 3.6rem;
+			}
+		}
+	}
+}
