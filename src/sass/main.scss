@@ -1,0 +1,82 @@
+@import './colors';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.6rem;
+	color: $dark;
+	background-color: $white;
+	// overflow: hidden;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 100%;
+  background-color: bisque;
+}
+
+p.company-description {
+	margin-top: 0.5rem;
+	font-size: 3rem;
+  font-weight: 700;
+}
+
+.header {
+		display: grid;
+		// justify-content: center;
+		align-content: center;
+		// justify-items: center;
+		// align-items: center;
+		grid-template-columns: repeat(10, 120px);
+
+    .hamburger {
+      display: none;
+    }
+
+    &__logo {
+			height: 100px;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      text-decoration: none;
+
+      .logo__icon {
+        width: 3.2rem;
+        height: 3.2rem;
+        mask: url('/dist/img/treeSvg.svg') no-repeat;
+        background: $dark;
+      }
+
+      // .logo__title {
+        
+      // }
+    }
+
+    .nav {
+      grid-column-start: 7;
+      grid-column-end: 11;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      // &__link {
+   
+      // }
+    }
+
+    .nav-mobile {
+      display: none;
+    }
+}
