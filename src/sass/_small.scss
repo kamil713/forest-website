@@ -3,22 +3,32 @@
 		max-width: 48rem;
 	}
 
-	/* NAV */
-	// .nav {
-	// }
+	.hero-text {
+		padding-left: 0;
+		padding-right: 0;
+	}
 
-	/* HEADER */
+	// HEADER
 	.header {
 		.hero-text {
-			padding-left: 0;
-			padding-right: 0;
-
 			h1 {
 				font-size: 2rem;
 			}
 
 			.company-description {
 				font-size: 2.7rem;
+			}
+		}
+	}
+
+	// MAIN
+	.main {
+		.adventure {
+			.hero-text {
+				.hero-description {
+					padding: 2rem 7.5rem;
+					font-size: 2rem;
+				}
 			}
 		}
 	}

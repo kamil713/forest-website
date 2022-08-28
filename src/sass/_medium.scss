@@ -1,31 +1,45 @@
 @media (min-width: 768px) {
-  .wrapper {
-    max-width: 76.8rem;
-  }
+	.wrapper {
+		max-width: 76.8rem;
+	}
 
-  /* HEADER */
+	/* HEADER */
 	.header {
-    background-image: url('/dist/img/jungleBig.jpg');
+		background-image: url('/dist/img/jungleBig.jpg');
 
 		.hero-text {
-      h1 {
-        font-size: 2.2rem;
-      }
-  
-      .company-description {
-        font-size: 3rem;
-      }
+			h1 {
+				font-size: 2.2rem;
+			}
+
+			.company-description {
+				font-size: 3rem;
+			}
 		}
 	}
 
-  	// FOOTER
+	// MAIN
+	.main {
+		.adventure {
+			background-image: url('/dist/img/girlBig.jpg');
+
+			.hero-text {
+				.hero-description {
+          padding: 2.5rem 14rem;
+					font-size: 2.5rem;
+				}
+			}
+		}
+	}
+
+	// FOOTER
 	.footer {
 		&__boxes {
 			grid-template-columns: repeat(5, auto);
-      padding: 4.5rem 0rem;
+			padding: 4.5rem 0rem;
 
-      .footer__box {
-        &-title {
+			.footer__box {
+				&-title {
 					font-size: 2.2rem;
 				}
 
@@ -40,41 +54,41 @@
 						}
 					}
 				}
-      }
+			}
 
 			.box-third,
 			.box-fourth {
-        margin-top: 0;
+				margin-top: 0;
 			}
 
-      :nth-child(1) {
-        .footer__box-title {
-          font-size: 4rem;
-  
-          .footer__box-logo {
-            width: 4rem;
-            height: 4rem;
-          }
-        }
-      }
+			:nth-child(1) {
+				.footer__box-title {
+					font-size: 4rem;
 
-      .box-second {
-        grid-column-start: 3;
-        grid-column-end: 4;
-      }
+					.footer__box-logo {
+						width: 4rem;
+						height: 4rem;
+					}
+				}
+			}
 
-      .box-third {
-        grid-column-start: 4;
-        grid-column-end: 5;
-      }
+			.box-second {
+				grid-column-start: 3;
+				grid-column-end: 4;
+			}
 
-      .box-fourth {
-        grid-column-start: 5;
-        grid-column-end: 6;
-      }
+			.box-third {
+				grid-column-start: 4;
+				grid-column-end: 5;
+			}
 
-      .box-second {
-        margin-left: 10rem;
+			.box-fourth {
+				grid-column-start: 5;
+				grid-column-end: 6;
+			}
+
+			.box-second {
+				margin-left: 10rem;
 			}
 		}
 	}

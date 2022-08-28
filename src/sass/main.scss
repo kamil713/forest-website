@@ -27,6 +27,23 @@ body {
 	width: 100%;
 }
 
+.hero-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hero-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: $white;
+	padding-left: 1.5rem;
+	padding-right: 1rem;
+}
+
 .visible {
 	display: block !important;
 }
@@ -134,22 +151,7 @@ body {
 	background-size: cover;
 	background-position: center;
 
-	.hero-bg {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.7);
-	}
-
 	.hero-text {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		color: $white;
-		padding-left: 1.5rem;
-		padding-right: 1rem;
-
 		h1 {
 			font-size: 1.8rem;
 			font-weight: 400;
@@ -162,6 +164,30 @@ body {
 		}
 	}
 }
+
+// MAIN
+.main {
+	.adventure {
+		position: relative;
+		height: 33rem;
+		background-image: url('/dist/img/girlSmall.jpg');
+		background-size: cover;
+		background-position: center;
+	
+		.hero-text {
+			display: flex;
+			justify-content: center;
+
+			.hero-description {
+				border: 1px solid $white;
+				padding: 2rem 4rem;
+				font-size: 1.6rem;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
 
 // FOOTER
 .footer {
@@ -231,27 +257,3 @@ body {
 @import './small';
 @import './medium';
 @import './large';
-
-
-// :nth-child(2) {
-// 	grid-column-start: 3;
-// 	grid-column-end: 4;
-// }
-
-// :nth-child(3) {
-// 	grid-column-start: 4;
-// 	grid-column-end: 5;
-// }
-
-// :nth-child(4) {
-// 	grid-column-start: 5;
-// 	grid-column-end: 6;
-// }
-
-// :nth-child(2),
-// :nth-child(3),
-// :nth-child(4) {
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items: center;
-// }
