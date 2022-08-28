@@ -23,7 +23,6 @@ body {
 
 .wrapper {
 	margin: 0 auto;
-	max-width: 76rem;
 	width: 100%;
 }
 
@@ -42,6 +41,20 @@ body {
 	color: $white;
 	padding-left: 1.5rem;
 	padding-right: 1rem;
+}
+
+.check {
+	mask: url('/dist/img/checkSvg.svg') no-repeat;
+	background: greenyellow;
+	width: 3.2rem;
+	height: 3.2rem;
+}
+
+.minus {
+	mask: url('/dist/img/minusSvg.svg') no-repeat;
+	background: $dark;
+	width: 3.2rem;
+	height: 3.2rem;
 }
 
 .visible {
@@ -221,6 +234,40 @@ body {
 				padding: 2rem 4rem;
 				font-size: 1.6rem;
 				font-weight: 700;
+			}
+		}
+	}
+
+	.offer {
+		&__header,
+		&__description,
+		.offers {
+			margin-top: 2rem;
+			text-align: center;
+		}
+
+		&__header {
+			font-size: 2.4rem;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+
+		// &__description {
+			
+		// }
+
+		.offers {
+			margin-bottom: 2rem;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+
+			&__box {
+				height: 400px;
+				width: 260px;
+				margin: 1.5rem;
+				// poprawić te marginesy
+				background-color: royalblue;
 			}
 		}
 	}
