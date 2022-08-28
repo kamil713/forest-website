@@ -14,6 +14,7 @@ let $navigationLogo; // live above but selected home item ?????
 let $navBtn;
 let $navMobile;
 let $allNavItems;
+let $footerYear;
 
 const main = () => {
 	prepareDOMElements();
@@ -26,6 +27,7 @@ const prepareDOMElements = () => {
 	$navBtn = document.querySelector('.hamburger');
 	$navMobile = document.querySelector('.mobile');
 	$allNavItems = document.querySelectorAll('.item--mobile');
+	$footerYear = document.querySelector('.footer__year');
 }
 
 const prepareDOMEvents = () => {
@@ -80,4 +82,14 @@ const deleteAnimation = () => {
 
 
 
-document.addEventListener('DOMContentLoaded', main);
+
+
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear();
+	$footerYear.innerText = year;
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+	main();
+	handleCurrentYear();
+});

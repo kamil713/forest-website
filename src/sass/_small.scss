@@ -22,4 +22,37 @@
 			}
 		}
 	}
+
+	// FOOTER
+	.footer {
+		&__boxes {
+			grid-template-columns: repeat(2, auto);
+			padding: 3rem 0;
+
+			.footer__box {
+				margin-top: 0;
+
+				&-title {
+					font-size: 2rem;
+				}
+
+				&-list {
+					margin-top: 1.2rem;
+
+					&-item {
+						margin-top: 1.2rem;
+
+						a {
+							font-size: 1.6rem;
+						}
+					}
+				}
+			}
+
+			.box-third,
+			.box-fourth {
+				margin-top: 1.5rem;
+			}
+		}
+	}
 }

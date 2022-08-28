@@ -38,9 +38,9 @@ body {
 	top: 0;
 	height: 8rem;
 	width: 100%;
-	background-color: $white;
+	background-color: $light-white;
 	display: flex;
-	border-bottom: 1px solid $darker;
+	border-bottom: 1px solid $dark;
 	z-index: 1;
 
 	.hamburger {
@@ -164,8 +164,94 @@ body {
 }
 
 // FOOTER
+.footer {
+	background-color: $light-white;
 
+	&__boxes {
+		display: grid;
+		padding: 3rem 1.5rem;
+
+		.footer__box {
+			margin-top: 1.5rem;
+
+			&-title {
+				color: $darker;
+			}
+
+			&-list {
+				margin-top: 0.8rem;
+				
+				&-item {
+					margin-top: 1rem;
+					list-style: none;
+
+					a {
+						color: $dark;
+						text-decoration: none;
+						cursor: pointer;
+	
+						&:hover {
+							color: $darker;
+						}
+					}
+				}
+			}
+		}
+
+		:nth-child(1) {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			text-decoration: none;
+			margin-top: 0;
+
+			.footer__box-title {
+				font-weight: 400;
+				font-size: 3.2rem;
+				color: $darker;
+
+				.footer__box-logo {
+					mask: url('/dist/img/treeSvg.svg') no-repeat;
+					background: $dark;
+					width: 3.2rem;
+					height: 3.2rem;
+					margin-right: 0.5rem;
+				}
+			}
+		}
+	}
+
+	&__bottom-text {
+		padding: 1.5rem 0;
+		border-top: 1px solid $dark;
+		text-align: center
+	}
+}
 
 @import './small';
 @import './medium';
 @import './large';
+
+
+// :nth-child(2) {
+// 	grid-column-start: 3;
+// 	grid-column-end: 4;
+// }
+
+// :nth-child(3) {
+// 	grid-column-start: 4;
+// 	grid-column-end: 5;
+// }
+
+// :nth-child(4) {
+// 	grid-column-start: 5;
+// 	grid-column-end: 6;
+// }
+
+// :nth-child(2),
+// :nth-child(3),
+// :nth-child(4) {
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// }
