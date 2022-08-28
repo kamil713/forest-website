@@ -1,19 +1,36 @@
 <nav class="nav">
-  <button class="hamburger hamburger--spin" type="button">
-    <span class="hamburger-box">
-      <span class="hamburger-inner"></span>
-    </span>
-  </button>
+  <div class="wrapper">
+    <button class="hamburger hamburger--spin" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
 
-  <a href="#" class="nav__logo">
-    <span class="logo__icon"></span>
-    <p class="logo__title">Forest</p>
-  </a>
+    <a href="#" class="nav__logo">
+      <span class="logo__icon"></span>
+      <p class="logo__title">Forest</p>
+    </a>
 
-  <div class="navigation">
-    <a class="navigation__item is-active" href="#">Home</a>
-    <a class="navigation__item" href="#aboutus">O nas</a>
-    <a class="navigation__item" href="#offers">Oferta</a>
-    <a class="navigation__item" href="#contact">Kontakt</a>
+    <div class="navigation">
+      <a class="navigation__item is-active" href="#">Home</a>
+      <a class="navigation__item" href="#aboutus">O nas</a>
+      <a class="navigation__item" href="#offers">Oferta</a>
+      <a class="navigation__item" href="#contact">Kontakt</a>
+    </div>
+    <div class="mobile">
+      <a class="item--mobile is-active" href="#" onclick="deleteAnimation()">Home</a>
+      <a class="item--mobile" href="#aboutus" onclick="deleteAnimation()">O nas</a>
+      <a class="item--mobile" href="#offers" onclick="deleteAnimation()">Oferta</a>
+      <a class="item--mobile" href="#contact" onclick="deleteAnimation()">Kontakt</a>
+    </div>
   </div>
 </nav>
+
+
+
+<!-- fajnie by było jakby wyjazd menu zaczekał -->
+
+
+<!-- żeby działało w rogu musi kolor zmienic w odpowiednim czasie :D -->
+
+<!-- przerobić najwyzej ta nawigacje -->
