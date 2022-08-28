@@ -23,6 +23,32 @@
 
 	// MAIN
 	.main {
+		.aboutus {
+			margin: 2.5rem 0;
+
+			&__header {
+				font-size: 2.6rem;
+			}
+
+			&__box {
+				margin-top: 2.5rem;
+
+				&-content {
+					margin-top: 2.5rem;
+					padding: 0;
+
+					&-title {
+						font-size: 2rem;
+					}
+
+					&-description {
+						margin-top: 1.5rem;
+						font-size: 1.4rem;
+					}
+				}
+			}
+		}
+
 		.adventure {
 			.hero-text {
 				.hero-description {

@@ -20,6 +20,38 @@
 
 	// MAIN
 	.main {
+    .aboutus {
+      margin: 3rem 0;
+
+      &__header {
+        font-size: 2.6rem;
+      }
+  
+      &__box {
+        grid-template-columns: repeat(2, 50%);
+        margin-top: 3rem;
+  
+        &-image {
+          padding: 0 1.5rem 1.5rem 0;
+        }
+  
+        &-content {
+          margin-top: 0;
+
+          &-title {
+            font-size: 2rem;
+          }
+  
+          &-description {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            line-height: 2.3rem;
+          }
+        }
+      }
+    }
+  
+
 		.adventure {
 			background-image: url('/dist/img/girlBig.jpg');
 
