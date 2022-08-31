@@ -126,6 +126,31 @@
 				}
 			}
 		}
+
+		.offer {
+			&__header,
+			&__description,
+			.offers {
+				margin-top: 4rem;
+			}
+	
+			&__header {
+				font-size: 3rem;
+			}
+
+			&__description {
+				font-size: 2rem;
+			}
+	
+			.offers {
+				height: 370px;
+				margin-bottom: 4rem;
+	
+				&__box {
+					margin: 1.5rem 2rem;
+				}
+			}
+		}
 	}
 
 	// FOOTER
