@@ -1,4 +1,3 @@
-
 // // const footerYear = document.querySelector('.footer__year');
 
 // const handleCurrentYear = () => {
@@ -19,7 +18,7 @@ let $footerYear;
 const main = () => {
 	prepareDOMElements();
 	prepareDOMEvents();
-}
+};
 
 const prepareDOMElements = () => {
 	$navigationItems = document.querySelectorAll('.navigation__item');
@@ -28,31 +27,34 @@ const prepareDOMElements = () => {
 	$navMobile = document.querySelector('.mobile');
 	$allNavItems = document.querySelectorAll('.item--mobile');
 	$footerYear = document.querySelector('.footer__year');
-}
+};
 
 const prepareDOMEvents = () => {
-	$navigationItems.forEach(item => {
+	$navigationItems.forEach((item) => {
 		item.addEventListener('click', function () {
 			navItemIsActiveChecker(item);
-		})
+		});
 	});
 	$navigationLogo.addEventListener('click', navLogoIsActiveChecker);
 	$navBtn.addEventListener('click', handleNav);
-}
+	$allNavItems.forEach((item) => {
+		item.addEventListener('click', toggleSectionObserve);
+	});
+};
 
 /* NAV LOGIC */
 const navItemIsActiveChecker = (item) => {
-	$navigationItems.forEach(el => {
-		el.classList.remove('is-active')
-	})
+	$navigationItems.forEach((el) => {
+		el.classList.remove('is-active');
+	});
 	item.classList.add('is-active');
-}
+};
 const navLogoIsActiveChecker = () => {
-	$navigationItems.forEach(el => {
-		el.classList.remove('is-active')
-	})
+	$navigationItems.forEach((el) => {
+		el.classList.remove('is-active');
+	});
 	$navigationItems[0].classList.add('is-active');
-}
+};
 const handleNav = () => {
 	$navBtn.classList.toggle('is-active');
 	$navMobile.classList.toggle('mobile--active');
@@ -60,9 +62,13 @@ const handleNav = () => {
 	$navBtn.classList.toggle('visible');
 
 	handleNavItemsAnimation();
-}
+};
 
-
+const toggleSectionObserve = () => {
+	$navBtn.classList.toggle('is-active');
+	$navMobile.classList.toggle('mobile--active');
+	$navBtn.classList.toggle('visible');
+};
 
 const handleNavItemsAnimation = () => {
 	let delayTime = 0;
@@ -79,10 +85,6 @@ const deleteAnimation = () => {
 		item.classList.remove('nav-items-animation');
 	});
 };
-
-
-
-
 
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear();

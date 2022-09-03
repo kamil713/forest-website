@@ -57,6 +57,13 @@ body {
 	height: 1.6rem;
 }
 
+.arrow {
+	mask: url('/dist/img/arrowSvg.svg') no-repeat;
+	background: $dark;
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
 .visible {
 	display: block !important;
 }
@@ -241,7 +248,8 @@ body {
 	.offer {
 		&__header,
 		&__description,
-		.offers {
+		.offers,
+		&__more {
 			margin-top: 2rem;
 			text-align: center;
 		}
@@ -295,7 +303,7 @@ body {
 				}
 
 				&-btn {
-					padding: 0.5rem 4rem;
+					padding: 0.7rem 4rem;
 					font-size: 1.5rem;
 					background-color: $white;
 					border: none;
@@ -307,6 +315,160 @@ body {
 						box-shadow: 0px 5px 10px 0px $green;
 					}
 				}
+			}
+		}
+
+		&__more {
+			margin: 2rem 0 4rem;
+
+			&-btn {
+				padding: 0.7rem 3.5rem;
+				font-size: 1.5rem;
+				background-color: $white;
+				border: none;
+				border-radius: 0.5rem;
+				box-shadow: 0px 5px 20px -5px $dark;
+
+				&-link {
+					display: flex;
+					align-items: center;
+					color: $darker;
+					text-decoration: none;
+
+					i {
+						margin-left: 0.5rem;
+					}
+				}
+
+				&:hover {
+					background-color: $green;
+					box-shadow: 0px 5px 10px 0px $green;
+				}
+			}
+		}
+	}
+
+	// CONTACT PAGE
+
+
+
+	.contact {
+		// display: flex;
+		// align-items: center;
+		// flex-direction: column;
+		display: grid;
+
+		&__title {
+			text-align: center;
+			padding: 4rem 0;
+			font-size: 2.6rem;
+			font-weight: 400;
+		}
+
+		&__map {
+			width: 100%;
+			padding-top: 0;
+			background-size: cover;
+			background-position: center;
+			margin-bottom: 3rem;
+		}
+
+		&__form,
+		&__form-top {
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+		}
+
+		&__form {
+			min-height: 450px;
+			width: 92%;
+			background-color: $light-white;
+			padding: 2rem;
+			margin-left: 1.5rem;
+			margin-bottom: 4rem;
+			border-radius: 2rem;
+		}
+
+		&__form-top { 
+			width: 65%;
+		}
+
+		&__form-label {
+			margin-bottom: 0.5rem;
+			text-transform: uppercase;
+		}
+
+		&__form-input {
+			width: 100%;
+			margin-bottom: 2rem;
+			padding: 0.6rem 1.2rem;
+			border: none;
+			border-radius: 8px;
+			font-size: 1.6rem;
+
+			&:focus {
+				outline: 2px solid $green;
+			}
+		}
+
+		&__form-textarea {
+			margin-bottom: 2rem;
+			padding: 0.6rem 1.2rem;
+			border: none;
+			border-radius: 8px;
+			font-size: 1.6rem;
+
+			max-width: 100%;
+			min-width: 100%;
+			width: 100%;
+			min-height: 150px;
+
+			&:focus {
+				outline: 2px solid $green;
+			}
+		}
+
+		&__form-btn {
+			align-self: flex-end;
+			padding: 1rem;
+			width: 100%;
+			max-width: 150px;
+			color: $darker;
+			border: none;
+			border-radius: 8px;
+			background-color: $green;
+			cursor: pointer;
+
+			&::before {
+				background-color: $dark;
+				opacity: 0.1;
+			}
+		}
+
+		.btn-special-animation {
+			position: relative;
+			transition: background-color 0.3s;
+			overflow: hidden;
+			z-index: 0;
+		
+			&::before {
+				display: block;
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				transform: scaleX(0);
+				transform-origin: right;
+				transition: transform 0.3s;
+				z-index: -1;
+			}
+		
+			&:hover::before {
+				transform: scaleX(1);
+				transform-origin: left;
 			}
 		}
 	}
@@ -380,3 +542,58 @@ body {
 @import './small';
 @import './medium';
 @import './large';
+
+// position: relative;
+// background-color: $light-white;
+// overflow: hidden;
+
+// &__title {
+// }
+
+// &__form,
+// &__form-top {
+// 	display: flex;
+// 	flex-direction: column;
+// }
+
+// &__form-label {
+// 	margin-bottom: 0.5rem;
+// 	text-transform: uppercase;
+// }
+
+// &__form-input {
+// 	margin-bottom: 2rem;
+// 	padding: 0.6em 1.2rem;
+// 	border: none;
+// 	border-radius: 8px;
+// 	font-size: 1.6rem;
+// }
+
+// &__form-textarea {
+// 	margin-bottom: 2rem;
+// 	padding: 0.6rem 1.2rem;
+// 	border: none;
+// 	border-radius: 8px;
+// 	font-size: 1.6rem;
+
+// 	max-width: 100%;
+// 	min-width: 100%;
+// 	width: 100%;
+// 	min-height: 150px;
+// }
+
+// &__form-btn {
+// 	align-self: flex-end;
+// 	padding: 1em;
+// 	width: 100%;
+// 	max-width: 300px;
+// 	color: $pure-white;
+// 	border: none;
+// 	border-radius: 8px;
+// 	background-color: $main-color;
+// 	cursor: pointer;
+
+// 	&::before {
+// 		background-color: $secondary-color;
+// 	}
+// }

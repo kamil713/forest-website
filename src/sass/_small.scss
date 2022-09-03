@@ -70,6 +70,7 @@
 			.offers {
 				&__box {
 					height: 350px;
+					width: 280px;
 
 					&-title {
 						font-size: 2.6rem;
@@ -80,10 +81,38 @@
 					}
 	
 					&-btn {
-						padding: 0.6rem 4.5rem;
+						padding: 0.7rem 4.5rem;
 						font-size: 1.6rem;
 					}
 				}
+			}
+
+			&__more {
+				&-btn {
+					padding: 0.7rem 4rem;
+					font-size: 1.6rem;
+				}
+			}
+		}
+
+		.contact {
+
+			&__map {
+				border-radius: 2rem;
+			}
+
+			&__form {
+				width: 100%;
+				margin-left: 0;
+				margin-bottom: 5rem;
+			}
+	
+			&__form-top { 
+				width: 50%;
+			}
+	
+			&__form-btn {
+				max-width: 300px;
 			}
 		}
 	}

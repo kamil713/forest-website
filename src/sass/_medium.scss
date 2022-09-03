@@ -86,12 +86,23 @@
 					}
 
 					&-btn {
-						padding: 0.7rem 5rem;
+						padding: 0.8rem 5rem;
 						font-size: 1.6rem;
 					}
 				}
 			}
+
+			&__more {
+				margin: 4rem 0 6rem;
+
+				&-btn {
+					padding: 0.8rem 4.5rem;
+					font-size: 1.6rem;
+				}
+			}
 		}
+
+
 	}
 
 	// FOOTER

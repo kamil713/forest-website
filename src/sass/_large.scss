@@ -151,6 +151,20 @@
 				}
 			}
 		}
+
+		.contact {
+			grid-template-columns: repeat(2, 50%);
+			gap: 2.5rem;
+
+			&__title {
+				grid-column-start: 1;
+				grid-column-end: 3;
+			}
+
+			&__form {
+				margin-bottom: 6rem;
+			}
+		}
 	}
 
 	// FOOTER
