@@ -1,18 +1,9 @@
-// // const footerYear = document.querySelector('.footer__year');
-
-// const handleCurrentYear = () => {
-// 	const year = new Date().getFullYear();
-// 	footerYear.innerText = year;
-// };
-
-// handleCurrentYear();
-
-/* NAV */
-let $navigationItems; // takes all the navigation items and marks the selected one
-let $navigationLogo; // live above but selected home item ?????
+let $navigationItems;
+let $navigationLogo;
 let $navBtn;
 let $navMobile;
 let $allNavItems;
+let $section;
 let $footerYear;
 
 const main = () => {
@@ -26,6 +17,7 @@ const prepareDOMElements = () => {
 	$navBtn = document.querySelector('.hamburger');
 	$navMobile = document.querySelector('.mobile');
 	$allNavItems = document.querySelectorAll('.item--mobile');
+	$section = document.querySelectorAll('section');
 	$footerYear = document.querySelector('.footer__year');
 };
 
@@ -40,21 +32,40 @@ const prepareDOMEvents = () => {
 	$allNavItems.forEach((item) => {
 		item.addEventListener('click', toggleSectionObserve);
 	});
+
+	window.onscroll = () => {
+		$section.forEach((sec) => {
+			let top = window.scrollY;
+			let offset = sec.offsetTop - 100;
+			let height = sec.offsetHeight;
+			let id = sec.getAttribute('id');
+
+			if (top >= offset && top < offset + height) {
+				$navigationItems.forEach((links) => {
+					links.classList.remove('is-active');
+					document
+						.querySelector('nav a[href*=' + id + ']')
+						.classList.add('is-active');
+				});
+			}
+		});
+	};
 };
 
-/* NAV LOGIC */
 const navItemIsActiveChecker = (item) => {
 	$navigationItems.forEach((el) => {
 		el.classList.remove('is-active');
 	});
 	item.classList.add('is-active');
 };
+
 const navLogoIsActiveChecker = () => {
 	$navigationItems.forEach((el) => {
 		el.classList.remove('is-active');
 	});
 	$navigationItems[0].classList.add('is-active');
 };
+
 const handleNav = () => {
 	$navBtn.classList.toggle('is-active');
 	$navMobile.classList.toggle('mobile--active');

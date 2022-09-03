@@ -349,13 +349,8 @@ body {
 	}
 
 	// CONTACT PAGE
-
-
-
 	.contact {
-		// display: flex;
-		// align-items: center;
-		// flex-direction: column;
+
 		display: grid;
 
 		&__title {
@@ -542,58 +537,3 @@ body {
 @import './small';
 @import './medium';
 @import './large';
-
-// position: relative;
-// background-color: $light-white;
-// overflow: hidden;
-
-// &__title {
-// }
-
-// &__form,
-// &__form-top {
-// 	display: flex;
-// 	flex-direction: column;
-// }
-
-// &__form-label {
-// 	margin-bottom: 0.5rem;
-// 	text-transform: uppercase;
-// }
-
-// &__form-input {
-// 	margin-bottom: 2rem;
-// 	padding: 0.6em 1.2rem;
-// 	border: none;
-// 	border-radius: 8px;
-// 	font-size: 1.6rem;
-// }
-
-// &__form-textarea {
-// 	margin-bottom: 2rem;
-// 	padding: 0.6rem 1.2rem;
-// 	border: none;
-// 	border-radius: 8px;
-// 	font-size: 1.6rem;
-
-// 	max-width: 100%;
-// 	min-width: 100%;
-// 	width: 100%;
-// 	min-height: 150px;
-// }
-
-// &__form-btn {
-// 	align-self: flex-end;
-// 	padding: 1em;
-// 	width: 100%;
-// 	max-width: 300px;
-// 	color: $pure-white;
-// 	border: none;
-// 	border-radius: 8px;
-// 	background-color: $main-color;
-// 	cursor: pointer;
-
-// 	&::before {
-// 		background-color: $secondary-color;
-// 	}
-// }
