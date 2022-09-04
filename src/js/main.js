@@ -1,9 +1,7 @@
 let $navigationItems;
-let $navigationLogo;
-let $navBtn;
+let $navMobileBtn;
 let $navMobile;
-let $allNavItems;
-let $section;
+let $navMobileItems;
 let $footerYear;
 
 const main = () => {
@@ -13,11 +11,9 @@ const main = () => {
 
 const prepareDOMElements = () => {
 	$navigationItems = document.querySelectorAll('.navigation__item');
-	$navigationLogo = document.querySelector('.nav__logo');
-	$navBtn = document.querySelector('.hamburger');
+	$navMobileBtn = document.querySelector('.hamburger');
 	$navMobile = document.querySelector('.mobile');
-	$allNavItems = document.querySelectorAll('.item--mobile');
-	$section = document.querySelectorAll('section');
+	$navMobileItems = document.querySelectorAll('.item--mobile');
 	$footerYear = document.querySelector('.footer__year');
 };
 
@@ -27,28 +23,32 @@ const prepareDOMEvents = () => {
 			navItemIsActiveChecker(item);
 		});
 	});
-	$navigationLogo.addEventListener('click', navLogoIsActiveChecker);
-	$navBtn.addEventListener('click', handleNav);
-	$allNavItems.forEach((item) => {
-		item.addEventListener('click', toggleSectionObserve);
+	$navMobileBtn.addEventListener('click', handleNav);
+	$navMobileItems.forEach(item => {
+		item.addEventListener('click', function () {
+			handleNav();
+		})
 	});
 
 	window.onscroll = () => {
-		$section.forEach((sec) => {
-			let top = window.scrollY;
-			let offset = sec.offsetTop - 100;
-			let height = sec.offsetHeight;
-			let id = sec.getAttribute('id');
+		let top = window.scrollY;
 
-			if (top >= offset && top < offset + height) {
-				$navigationItems.forEach((links) => {
-					links.classList.remove('is-active');
-					document
-						.querySelector('nav a[href*=' + id + ']')
-						.classList.add('is-active');
-				});
-			}
-		});
+		if (top <= 80) {
+			$navigationItems.forEach((links) => {
+				links.classList.remove('is-active');
+				$navigationItems[0].classList.add('is-active');
+			});
+		} else if (top <= 460) {
+			$navigationItems.forEach((links) => {
+				links.classList.remove('is-active');
+				$navigationItems[1].classList.add('is-active');
+			});
+		} else if (top <= 1304) {
+			$navigationItems.forEach((links) => {
+				links.classList.remove('is-active');
+				$navigationItems[2].classList.add('is-active');
+			});
+		}
 	};
 };
 
@@ -56,45 +56,14 @@ const navItemIsActiveChecker = (item) => {
 	$navigationItems.forEach((el) => {
 		el.classList.remove('is-active');
 	});
+
 	item.classList.add('is-active');
 };
 
-const navLogoIsActiveChecker = () => {
-	$navigationItems.forEach((el) => {
-		el.classList.remove('is-active');
-	});
-	$navigationItems[0].classList.add('is-active');
-};
-
 const handleNav = () => {
-	$navBtn.classList.toggle('is-active');
+	$navMobileBtn.classList.toggle('is-active');
 	$navMobile.classList.toggle('mobile--active');
-
-	$navBtn.classList.toggle('visible');
-
-	handleNavItemsAnimation();
-};
-
-const toggleSectionObserve = () => {
-	$navBtn.classList.toggle('is-active');
-	$navMobile.classList.toggle('mobile--active');
-	$navBtn.classList.toggle('visible');
-};
-
-const handleNavItemsAnimation = () => {
-	let delayTime = 0;
-
-	$allNavItems.forEach((item) => {
-		item.classList.toggle('nav-items-animation');
-		item.style.animationDelay = '.' + delayTime + 's';
-		delayTime++;
-	});
-};
-
-const deleteAnimation = () => {
-	$allNavItems.forEach((item) => {
-		item.classList.remove('nav-items-animation');
-	});
+	$navMobileBtn.classList.toggle('visible');
 };
 
 const handleCurrentYear = () => {
