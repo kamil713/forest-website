@@ -18,7 +18,6 @@ body {
 	font-size: 1.6rem;
 	color: $dark;
 	background-color: $white;
-	// overflow: hidden;
 }
 
 .wrapper {
@@ -44,21 +43,21 @@ body {
 }
 
 .check {
-	mask: url('/dist/img/checkSvg.svg') no-repeat;
+	mask: url('../img/checkSvg.svg') no-repeat;
 	background: $green;
 	width: 1.6rem;
 	height: 1.6rem;
 }
 
 .minus {
-	mask: url('/dist/img/minusSvg.svg') no-repeat;
+	mask: url('../img/minusSvg.svg') no-repeat;
 	background: $dark;
 	width: 1.6rem;
 	height: 1.6rem;
 }
 
 .arrow {
-	mask: url('/dist/img/arrowSvg.svg') no-repeat;
+	mask: url('../img/arrowSvg.svg') no-repeat;
 	background: $dark;
 	width: 1.6rem;
 	height: 1.6rem;
@@ -167,7 +166,7 @@ body {
 	position: relative;
 	height: 33rem;
 	margin-top: 8rem;
-	background-image: url('/dist/img/jungleSmall.jpg');
+	background-image: url('../img/jungleSmall.jpg');
 	background-size: cover;
 	background-position: center;
 
@@ -228,7 +227,7 @@ body {
 	.adventure {
 		position: relative;
 		height: 28rem;
-		background-image: url('/dist/img/girlSmall.jpg');
+		background-image: url('../img/girlSmall.jpg');
 		background-size: cover;
 		background-position: center;
 
@@ -517,7 +516,7 @@ body {
 				color: $darker;
 
 				.footer__box-logo {
-					mask: url('/dist/img/treeSvg.svg') no-repeat;
+					mask: url('../img/treeSvg.svg') no-repeat;
 					background: $dark;
 					width: 3.2rem;
 					height: 3.2rem;
