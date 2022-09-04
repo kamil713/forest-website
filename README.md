@@ -36,7 +36,7 @@
 ### :camera: Screenshots
 
 <div align="center"> 
-  <img src="./dist/img/screenshotForestGroup" alt="screenshot" />
+  <img src="./dist/img/screenshotForestGroup.png" alt="screenshot" />
 </div>
 
 
